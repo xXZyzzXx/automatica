@@ -9,6 +9,7 @@ class StoreAdmin(admin.ModelAdmin):
         "title",
         "worker",
     )
+    search_fields = ("title",)
 
 
 @admin.register(Visit)
@@ -21,3 +22,4 @@ class VisitAdmin(admin.ModelAdmin):
         "longitude",
     )
     list_filter = ("visit_datetime",)
+    search_fields = ("store__title", "store_worker__name",)

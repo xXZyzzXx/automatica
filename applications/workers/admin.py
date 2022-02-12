@@ -9,3 +9,4 @@ class WorkerAdmin(admin.ModelAdmin):
         "name",
         "phone",
     )
+    search_fields = ("name",)
